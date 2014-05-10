@@ -1,0 +1,34 @@
+{
+    "name": "jsutil",
+    "version": "0.0.1",
+    "description": "Javascript Library with Utilities for Front-End Development",
+    "main": "general.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sergiofilhowz/JSUtil.git"
+    },
+    "keywords": [
+        "util",
+        "javascript",
+        "js",
+        "jquery",
+        "frontend"
+    ],
+    "author": "http://sergio.filho.org",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sergiofilhowz/JSUtil/issues"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.4",
+        "grunt-contrib-concat": "^0.4.0",
+        "grunt-contrib-cssmin": "^0.9.0",
+        "grunt-contrib-jshint": "~0.10.0",
+        "grunt-contrib-nodeunit": "~0.3.3",
+        "grunt-contrib-uglify": "^0.4.0"
+    },
+    "homepage": "https://github.com/sergiofilhowz/JSUtil"
+}
