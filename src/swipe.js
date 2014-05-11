@@ -1,21 +1,24 @@
 /*jslint browser: true*/
-/*global $, jQuery, alert*/
+/*global $, jQuery, alert, JSUtil*/
 
 
 /**
  * Enable Swipe events handling
  *
- * @var config.tolerance    Indicate the pixel distance to be considered a 
+ * @var options.tolerance   Indicate the pixel distance to be considered a 
  *                          swipe, the default value is 100.
  *
  * @events                  swipedown, swipeup, swipeleft, swiperight
  */
-$.fn.enableSwipe = function (config) {
+$.fn.enableSwipe = function (options) {
     
     'use strict';
     
-    config = config || {};
-    config.tolerance = config.tolerance || 100;
+    var defaults = {
+        tolerance : 100  // Indicate the pixel distance to be considered a swipe, the default value is 100.
+    };
+    
+    options = JSUtil.defaults(options, defaults);
 	
 	var isTouch = 'ontouchstart' in window,
         touchStart = isTouch ? 'touchstart' : 'mousedown',
@@ -55,15 +58,15 @@ $.fn.enableSwipe = function (config) {
 		evt.currentTarget.mouseDownX = undefined;
 		evt.currentTarget.mouseDownY = undefined;
 
-		if (mouseDownY + config.tolerance < pageY) {
+		if (mouseDownY + options.tolerance < pageY) {
 			$target.trigger('swipedown');
-		} else if (mouseDownY - config.tolerance > pageY) {
+		} else if (mouseDownY - options.tolerance > pageY) {
 			$target.trigger('swipeup');
 		}
 
-		if (mouseDownX + config.tolerance < pageX) {
+		if (mouseDownX + options.tolerance < pageX) {
 			$target.trigger('swiperight');
-		} else if (mouseDownX - config.tolerance > pageX) {
+		} else if (mouseDownX - options.tolerance > pageX) {
 			$target.trigger('swipeleft');
 		}
 
