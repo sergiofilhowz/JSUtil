@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 
     'use strict';
     
-    var banner = '/* \n * JSUtil is licensed under MIT License @ 2014 \n * \n * Author: http://sergio.filho.org \n * More details on http://github.com/sergiofilhow/JSUtil \n * \n */ \n\n';
+    var banner = '/* \n * JSUtil <%= pkg.version %> is under MIT License (c) 2014 Sérgio Marcelino \n * \n * Author: http://sergio.filho.org \n * More details on http://github.com/sergiofilhow/JSUtil \n * \n */ \n\n';
     
     // Project configuration.
     grunt.initConfig({

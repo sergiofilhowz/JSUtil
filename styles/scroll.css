@@ -1,0 +1,14 @@
+.jsutil-scroll {
+    width: 7px;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.jsutil-pin {
+    border-radius: 5px;
+	background: #b5b5b5;
+	width: 100%;
+	position: absolute;
+}

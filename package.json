@@ -1,6 +1,7 @@
 {
     "name": "jsutil",
     "version": "0.0.1",
+    
     "description": "Javascript Library with Utilities for Front-End Development",
     "main": "general.js",
     "scripts": {
