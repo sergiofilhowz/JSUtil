@@ -1,8 +1,18 @@
 /*jslint browser: true*/
 /*global $, jQuery, alert, JSUtil*/
 
+/**
+ * Remaining elements to trigger the event
+ */
 $.scrollshowElements = [];
 
+/**
+ * This function is called to make the element listen when he
+ * appears on screen while scrolling.
+ *
+ * @param {Function} trigger - The function called when the element appears,
+ *                             the param received by this function is the element
+ */
 $.fn.scrollshow = function (trigger) {
     
     'use strict';
