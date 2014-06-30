@@ -19,8 +19,8 @@ function Slider($el, pageChangeHandler, initFunction) {
     
     this.el = $el;
     this.paginator = $el.find('.jsutil-paginator');
-    this.previousArrow = $el.find('.jsutil-previous-arrow');
-    this.nextArrow = $el.find('.jsutil-next-arrow');
+    this.previousArrow = $el.find('.jsutil-slider-previous-arrow');
+    this.nextArrow = $el.find('.jsutil-slider-next-arrow');
     this.paginatorItems = [];
     this.currentItem = undefined;
     
@@ -136,11 +136,11 @@ Slider.prototype.itemClickHandler = function (evt) {
  * 4 - paginator-item-click (receives the paginator item clicked)
  *
  * The element must have the following structure:
- * 1 - jsutil-slider           el (the slider's body element)
- * 2 - jsutil-paginator        paginador (the paginator's body element inside the slider)
- * 3 - jsutil-paginator-item   item do paginador (each paginator's item inside paginator)
- * 4 - jsutil-previous-arrow   seta-esquerda (HTML element that represents the left-arrow, this is optional)
- * 5 - jsutil-next-arrow       seta-direita (HTML element that represents the right-arrow, this is optional)
+ * 1 - jsutil-slider                  the slider's body element
+ * 2 - jsutil-paginator               the paginator's body element inside the slider
+ * 3 - jsutil-paginator-item          item do paginador (each paginator's item inside paginator
+ * 4 - jsutil-slider-previous-arrow   HTML element that represents the left-arrow, this is optional
+ * 5 - jsutil-slider-next-arrow       HTML element that represents the right-arrow, this is optional
  */
 $.prototype.slider = function (pageChangeHandler, initFunction) {
     'use strict';
