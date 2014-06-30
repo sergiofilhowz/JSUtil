@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global $, jQuery, alert, JSUtil*/
+/*global $, jQuery, JSUtil*/
 
 $.fn.customScroll = function (options) {
 
@@ -20,8 +20,6 @@ $.fn.customScroll = function (options) {
             pin = item.scrollPin,
             height = $item.height(),
             pinHeight = item.clientHeight / item.scrollHeight * 100;
-        
-        scroll.css('height', height);
 
         if (options.resizable) {
             pin.css('height', pinHeight + '%');
@@ -58,7 +56,9 @@ $.fn.customScroll = function (options) {
         scroll.targetEl = item;
 		scroll.append(pin);
         
-        $item.parent().append(scroll);
+        $item.parent().addClass('jsutil-no-overflow');
+        $item.addClass('jsutil-scrollable');
+        $item.append(scroll);
 		item.scrollBar = scroll;
 		item.scrollPin = pin;
         
@@ -128,6 +128,7 @@ $.fn.customScroll = function (options) {
             actualHeight = item.scrollHeight,
             top = options.resizable ? item.scrollTop / actualHeight * 100 : item.scrollTop / resto * 100;
 		
+        scroll.css('margin-top', item.scrollTop);
 		pin.css('top', top + '%');
 	});
     

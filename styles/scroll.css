@@ -2,7 +2,7 @@
     width: 7px;
 	height: 100%;
 	position: absolute;
-	right: 0px;
+	right: 30px;
 	top: 0px;
 }
 
@@ -11,4 +11,14 @@
 	background: #b5b5b5;
 	width: 100%;
 	position: absolute;
+}
+
+.jsutil-scrollable {
+    position: relative;
+    width: calc(100% + 30px);
+    padding-right: 30px;
+}
+
+.jsutil-no-overflow {
+    overflow-x: hidden;
 }
